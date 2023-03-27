@@ -89,6 +89,8 @@ public class MainActivity extends AppCompatActivity {
                 media= MediaPlayer.create(MainActivity.this,arrayList.get(position).getFile());
                 txtTitle.setText(arrayList.get(position).getTitle());
 
+                imageView.clearAnimation();
+
 
 
             }
@@ -101,9 +103,11 @@ public class MainActivity extends AppCompatActivity {
                     media.pause();
                     imgPlay.setImageResource(R.drawable.play);
                 }
+
                 else {
                     media.start();
                     imgPlay.setImageResource(R.drawable.pause);
+
                 }
                 settimeSetting();
                 Rutime();
@@ -175,10 +179,10 @@ public class MainActivity extends AppCompatActivity {
     private void addSong(){
        arrayList = new ArrayList<>();
        // Tạo thêm nhạc vào danh sách
-       arrayList.add(new Song("Âm nhạc số 1", R.raw.detran));
-       arrayList.add(new Song("Âm nhạc số 2", R.raw.huongly));
-       arrayList.add(new Song("Âm nhạc số 3", R.raw.keyo));
-       arrayList.add(new Song("Âm nhạc số 4", R.raw.krik));
+       arrayList.add(new Song("25 - Táo", R.raw.hailam));
+       arrayList.add(new Song("Cho tôi lang thang - Đen Vâu", R.raw.chotoilangthang));
+       arrayList.add(new Song("Bật Tình yêu lên - Hòa Minzy", R.raw.battinhyeulen));
+       arrayList.add(new Song("Thị mầu - Hòa Minzy", R.raw.thimau));
 
     }
     private void anhxa(){
