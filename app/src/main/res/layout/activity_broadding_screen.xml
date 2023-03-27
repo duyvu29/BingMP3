@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dd"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imBack"
+        android:layout_width="48dp"
+        android:layout_height="42dp"
+        android:layout_margin="6dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/back" />
+
+    <LinearLayout
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="109dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/img_2" />
+
+        <EditText
+            android:id="@+id/edtAccount"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/shape_back"
+            android:ems="10"
+            android:hint="Tên đăng nhập"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/shape_back"
+            android:ems="10"
+            android:hint="Nhập mật khẩu"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogin"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center"
+            android:background="@drawable/shape_back"
+            android:text="Đăng Nhập"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="115dp"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/ic_phonee" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="30dp"
+            android:text="Hotline hỗ trợ: 0999912345"
+            android:textColor="@color/black"
+            android:textStyle="italic" />
+    </LinearLayout>
+</LinearLayout>

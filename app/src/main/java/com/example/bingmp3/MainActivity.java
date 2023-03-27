@@ -100,10 +100,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (media.isPlaying()){
+                    imageView.clearAnimation();
                     media.pause();
                     imgPlay.setImageResource(R.drawable.play);
                 }
-
                 else {
                     media.start();
                     imgPlay.setImageResource(R.drawable.pause);

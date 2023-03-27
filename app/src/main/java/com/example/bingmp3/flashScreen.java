@@ -5,20 +5,32 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
+import android.widget.Button;
 import android.window.SplashScreen;
 
 public class flashScreen extends AppCompatActivity {
+
+    Button btnGetMusic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flash_screen);
-        new Handler().postDelayed(new Runnable() {
+        mapping();
+
+        btnGetMusic.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                startActivity(new Intent(flashScreen.this, MainActivity.class));
+            public void onClick(View v) {
+                Intent intent = new Intent(flashScreen.this, broaddingScreen.class);
+                startActivity(intent);
                 finish();
             }
-        }, 4000);
+        });
     }
+
+    private void mapping() {
+        btnGetMusic = findViewById(R.id.btnGetMusic);
+    }
+
 }
